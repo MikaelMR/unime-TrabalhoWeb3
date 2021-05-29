@@ -1,0 +1,46 @@
+body {
+    background-image: url(../img/background.png);
+}
+#titulo {
+    border: 3px solid white;
+    padding: 10px;
+    margin: auto;
+    width: 800px;
+    text-align: center;
+}
+
+#navegacao {
+    display: table;
+    margin: 0 auto;
+}
+.navegacaoLista {
+    display: inline-block;
+    border: 3px solid white;
+    padding: 10px;
+    width: 80px;
+    text-align: center;
+}
+
+#conteudo {
+    border: 3px solid white;
+    padding: 20px;
+    margin: 0 auto;
+    width: 1000px;
+    min-height: 800px;
+}
+.conteudoImg {
+    max-width: 40%;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.conteudoDesc {
+    border: 1px solid black;
+}
+.conteudoUL {
+    list-style-type: none;
+}
+.conImgDesc {
+    display: inline-block;
+    vertical-align: top;
+}
