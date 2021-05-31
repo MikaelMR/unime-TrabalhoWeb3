@@ -1,11 +1,17 @@
 body {
     background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    color: #DCEFBA;
 }
+
 #titulo {
-    border: 3px solid white;
+    border: 5px solid #176412;
+    border-radius: 8px;
+    background-color: #6E4404;
+    opacity: 0.95;
     padding: 10px;
     margin: auto;
-    width: 800px;
+    width: 920px;
     text-align: center;
 }
 
@@ -15,32 +21,60 @@ body {
 }
 .navegacaoLista {
     display: inline-block;
-    border: 3px solid white;
+    border: 5px solid #176412;
+    border-radius: 8px;
+    background-color: #6E4404;
+    opacity: 0.95;
     padding: 10px;
     width: 80px;
     text-align: center;
 }
 
 #conteudo {
-    border: 3px solid white;
+    border: 5px solid #176412;
+    border-radius: 8px;
+    background-color: #6E4404;
+    opacity: 0.95;
     padding: 20px;
     margin: 0 auto;
-    width: 1000px;
+    width: 900px;
     min-height: 800px;
 }
-.conteudoImg {
-    max-width: 40%;
+.conteudoImgh1,
+.conteudoImgh2,
+.conteudoImghi1,
+.conteudoImghi2,
+.conteudoImgo {
+    position: absolute;
+    width: 350px;
     border: 1px solid black;
     border-radius: 8px;
     margin-bottom: 20px;
 }
+.conteudoImgo {
+    top: 285px;
+    right: 25%;
+    border-radius: 50px;
+    width: 220px;
+}
+.conteudoImgh1 {
+    right: 52%;
+}
+.conteudoImgh2 {
+    right: 22%;
+}
+.conteudoImghi1 {
+    top: 800px;
+    right: 52%;
+}
+.conteudoImghi2 {
+    top: 800px;
+    right: 22%;
+}
 .conteudoDesc {
     border: 1px solid black;
-}
-.conteudoUL {
-    list-style-type: none;
-}
-.conImgDesc {
-    display: inline-block;
-    vertical-align: top;
+    border-radius: 8px;
+    background-color: #6E4404;
+    padding: 10px;
+    width: 50%;
 }
