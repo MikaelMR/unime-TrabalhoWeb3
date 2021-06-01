@@ -181,17 +181,18 @@ a:active {
 .pedidosColuna {
     display: flex;
     align-items: center;
-    border: 1px solid black;
-    border-radius: 15px;
+    border-bottom: 1px solid black;
     margin-right: 1.5em;
-    padding: 10px;
+    padding-bottom: 10px;
     margin-top: 10px;
 }
-.pedidosLinha {
+.pedidosLinha,
+.pedidosItensLinha {
     display: flex;
 }
 .pedidosHead {
-    font-size: 1.25rem;
+    font-weight: bold;
+    font-size: 1.25em;
 }
 .pedidosNome {
     width: 45%;
@@ -227,9 +228,10 @@ a:active {
     color: #DCEFBA;
     background-color: #B92609;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     font-weight: bold;
     margin-top: .75em;
+    padding: 18px;
 }
 .butaoRMV:hover {
     background-color: #E22C08;
@@ -249,6 +251,19 @@ a:active {
 .pedidosTotalPreco {
     color: #DCEFBA;
     font-size: 1.1em;
+}
+.pedidosTotalButao {
+    color: #DCEFBA;
+    background-color: #176412;
+    opacity: 0.95;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 10px;
+    margin-right: 20px;
+}
+.pedidosTotalButao:hover {
+    background-color: #13890C;
 }
 
 

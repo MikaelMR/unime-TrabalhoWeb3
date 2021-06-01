@@ -11,6 +11,13 @@ function ready() {
         var button = removerPedidosButao[i]
         button.addEventListener('click', removerPedidos)
     }
+    
+    var quantidadeInput = document.getElementsByClassName('pedidosQuanInput')
+    for (var i = 0; i < quantidadeInput.length; i++) {
+        var input = quantidadeInput[i]
+        input.addEventListener('change', quantidadeMudada)
+    }
+
 }
 
 function removerPedidos(event) {
@@ -19,20 +26,29 @@ function removerPedidos(event) {
     updatePedidosTotal()
 }
 
+function quantidadeMudada(event) {
+    var input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1
+    }
+    updatePedidosTotal()
+}
+
 function updatePedidosTotal() {
     var pedidosItemContainer = document.getElementsByClassName('pedidosItens')[0]
-    var pedidosLinhas = pedidosItemContainer.getElementsByClassName('pedidosLinha')
+    var pedidosRows = pedidosItemContainer.getElementsByClassName('pedidosItensLinha')
     var total = 0
-    for (var i = 0; i < pedidosLinhas.length; i++) {
-        var pedidosLinhaSing = pedidosLinhas[i]
-        var precoElement = pedidosLinhaSing.getElementsByClassName('pedidosPreco')[0]
-        var quantElement = pedidosLinhaSing.getElementsByClassName('pedidosQuanInput')[0]
+    for (var i = 0; i < pedidosRows.length; i++) {
+        var pedidosRow = pedidosRows[i]
+        var precoElement = pedidosRow.getElementsByClassName('pedidosPreco')[0]
+        var quantElement = pedidosRow.getElementsByClassName('pedidosQuanInput')[0]
         var preco = parseFloat(precoElement.innerText.replace('R$', ''))
         var quantidade = quantElement.value
         total = total + (preco * quantidade)
-        document.getElementsByClassName('pedidosTotalPreco')[0].innerText = 'R$ ' + total
         console.log(preco, quantidade, total)
     }
-    
+    document.getElementsByClassName('pedidosTotalPreco')[0].innerText = 'R$ ' + total
 }
+
+
 
