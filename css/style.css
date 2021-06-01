@@ -83,7 +83,7 @@ a:active {
     display: inline-block;
     border: 1px solid black;
     border-radius: 50px;
-    margin-left: 40px;
+    margin: auto;
     width: 220px;
 }
 .conteudoFuncI {
@@ -113,3 +113,45 @@ a:active {
     width: 40%;
     margin: 10px;
 }
+
+#conteudoProdutos {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    width: 50%;
+    height: 800px;
+    overflow: auto;
+}
+#conteudoProdutosImg,
+#conteudoProdutosNome,
+#conteudoProdutosDesc {
+    display: table;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+#conteudoProdutosImg{
+    width: 53%;
+}
+#conteudoProdutosNome,
+#conteudoProdutosDesc {
+    text-align: center;
+    padding: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #6E4404; 
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #176412; 
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #176412; 
+  }
