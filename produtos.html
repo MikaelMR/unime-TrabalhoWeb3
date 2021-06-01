@@ -7,6 +7,7 @@
     <title>Produtos Page (TW3)</title>
     <link rel="stylesheet" href="../unime-TrabalhoWeb3/css/style.css">
     <script type="text/javascript" src="../unime-TrabalhoWeb3/js/jquery-3.6.0.min.js"></script>
+    <script src="../unime-TrabalhoWeb3/js/base.js" async></script>
 </head>
 <body>
     <div id="titulo">
@@ -27,24 +28,20 @@
         <div id="conteudoProdutos">
             <div><img id="conteudoProdutosImg" src="../unime-TrabalhoWeb3/img/produtos/hp.jpg"></div>
             <div id="conteudoProdutosNome"><h3>Poção de Regeneração de Tecido</h3></div>
-            <div id="conteudoProdutosPreco"><h3>R$ 80,00</h3></div>
+            <div id="conteudoProdutosPreco"><h3>R$ 80.00</h3></div>
             <div id="conteudoProdutosQuan">
-                <button onclick="addQuanP1();">+</button>
-                <input id="quanP1" type="number" min="0" value="0"></input>
-                <button onclick="remQuanP1();">-</button>
+                <button class="butao butaoMain butaoProdutos">ADICIONAR AO CARRINHO</button>
             </div>
             <div id="conteudoProdutosDesc">Ingerida oralmente, uso único, acelera o processo de cicatrização e recuperação de tecido, efeitos ocorrem ao decorrer de 2 horas e pode variar de acordo com o peso do usuário. Agora com gostinho de cereja!</div>
         </div>
         <div id="conteudoProdutos">
             <div><img id="conteudoProdutosImg" src="../unime-TrabalhoWeb3/img/produtos/orange.jpg"></div>
-            <div id="conteudoProdutosNome"><h3>Poção de Regeneração de Tecido</h3></div>
-            <div id="conteudoProdutosPreco"><h3>R$ 10,00</h3></div>
+            <div id="conteudoProdutosNome"><h3>Poção de Resistência ao Fogo</h3></div>
+            <div id="conteudoProdutosPreco"><h3>R$ 180.50</h3></div>
             <div id="conteudoProdutosQuan">
-                <button onclick="addQuanP2();">+</button>
-                <input id="quanP2" type="number" min="0" value="0"></input>
-                <button onclick="remQuanP2();">-</button>
+                <button class="butao butaoMain butaoProdutos">ADICIONAR AO CARRINHO</button>
             </div>
-            <div id="conteudoProdutosDesc">Ingerida oralmente, uso único, acelera o processo de cicatrização e recuperação de tecido, efeitos ocorrem ao decorrer de 2 horas e pode variar de acordo com o peso do usuário. Agora com gostinho de cereja!</div>
+            <div id="conteudoProdutosDesc">Quando aplicada na pele, a região da derme se turna invulnerável a qualquer tipo de lesão causada por queimaduras (Até 800C).</div>
         </div>
         <div id="conteudoProdutos">
             <div><img id="conteudoProdutosImg" src="../unime-TrabalhoWeb3/img/produtos/cyan.jpg"></div>
@@ -115,7 +112,7 @@
     </div>
 
     <div class="pedidos">
-       <h2>Seu carrinho:</h2>
+        <h2>Seu carrinho:</h2>
         <div class="pedidosLinha">
             <span class="pedidosHead pedidosColuna pedidosNome">Produtos</span>
             <span class="pedidosHead pedidosColuna pedidosPreco">Preço</span>
@@ -123,101 +120,32 @@
         </div>
         <div class="pedidosItens">
             <div class="pedidosLinha">
-                <div class="pedidosLinha pedidosNome">
+                <div class="pedidosNome pedidosLinha">
                     <span class="pedidosNomeTitulo">Poção de Regeneração de Tecido</span>
                 </div>
-                <span class="pedidosLinha pedidosPreco" style="margin-top: 1em;">R$ 80,00</span>
-                <div class="pedidosLinha pedidosQuan">
+                <span class="pedidosPreco pedidosLinha" style="margin-top: 1em;">R$ 80.00</span>
+                <div class="pedidosQuan pedidosLinha">
                     <input class="pedidosQuanInput" type="number" value="1">
                     <button class="butao butaoRMV" type="button">REMOVER</button>
                 </div>
             </div>
+            <div class="pedidosLinha">
+                <div class="pedidosNome pedidosLinha">
+                    <span class="pedidosNomeTitulo">Poção de Resistência ao Fogo</span>
+                </div>
+                <span class="pedidosPreco pedidosLinha" style="margin-top: 1em;">R$ 180.50</span>
+                <div class="pedidosQuan pedidosLinha">
+                    <input class="pedidosQuanInput" type="number" value="2">
+                    <button class="butao butaoRMV" type="button">REMOVER</button>
+                </div>
+            </div>
         </div>
-
+        <div class="pedidosTotal">
+            <strong class="pedidosTotalNome">Total</strong>
+            <span class="pedidosTotalPreco">R$ 0</span>
+        </div>
     </div>
+    
 
-    <script>
-        var q = 0;
-        function addQuanP1() {
-            q++;
-            document.getElementById('quanP1').value = q;
-        }
-        function remQuanP1() {
-            if (q > 0) {
-                q--;
-                document.getElementById('quanP1').value = q;
-            }
-        }
-        function addQuanP2() {
-            q++;
-            document.getElementById('quanP2').value = q;
-        }
-        function remQuanP2() {
-            if (q > 0) {
-                q--;
-                document.getElementById('quanP2').value = q;
-            }
-        }
-        function addQuanP3() {
-            q++;
-            document.getElementById('quanP3').value = q;
-        }
-        function remQuanP3() {
-            if (q > 0) {
-                q--;
-                document.getElementById('quanP3').value = q;
-            }
-        }
-        function addQuanP4() {
-            q++;
-            document.getElementById('quanP4').value = q;
-        }
-        function remQuanP4() {
-            if (q > 0) {
-                q--;
-                document.getElementById('quanP4').value = q;
-            }
-        }
-        function addQuanP5() {
-            q++;
-            document.getElementById('quanP5').value = q;
-        }
-        function remQuanP5() {
-            if (q > 0) {
-                q--;
-                document.getElementById('quanP5').value = q;
-            }
-        }
-        function addQuanP6() {
-            q++;
-            document.getElementById('quanP6').value = q;
-        }
-        function remQuanP6() {
-            if (q > 0) {
-                q--;
-                document.getElementById('quanP6').value = q;
-            }
-        }
-        function addQuanP7() {
-            q++;
-            document.getElementById('quanP7').value = q;
-        }
-        function remQuanP7() {
-            if (q > 0) {
-                q--;
-                document.getElementById('quanP7').value = q;
-            }
-        }
-        function addQuanP8() {
-            q++;
-            document.getElementById('quanP8').value = q;
-        }
-        function remQuanP8() {
-            if (q > 0) {
-                q--;
-                document.getElementById('quanP8').value = q;
-            }
-        }
-    </script>
 </body>
 </html>

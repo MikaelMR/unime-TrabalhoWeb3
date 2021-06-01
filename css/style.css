@@ -152,6 +152,18 @@ a:active {
     width: 96%;
     padding: 10px;
 }
+.butaoMain {
+    color: #DCEFBA;
+    background-color: #176412;
+    opacity: 0.95;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 20px;
+}
+.butaoMain:hover {
+    background-color: #13890C;
+}
 
 .pedidos {
     border: 5px solid #176412;
@@ -213,14 +225,30 @@ a:active {
 }
 .butaoRMV {
     color: #DCEFBA;
-    background-color: #EB5757;
+    background-color: #B92609;
     border: none;
     border-radius: 5px;
     font-weight: bold;
     margin-top: .75em;
 }
 .butaoRMV:hover {
-    background-color: #CC4C4C;
+    background-color: #E22C08;
+}
+
+.pedidosTotal {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+.pedidosTotalNome {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #DCEFBA;
+    margin-right: 20px;
+}
+.pedidosTotalPreco {
+    color: #DCEFBA;
+    font-size: 1.1em;
 }
 
 
