@@ -47,6 +47,7 @@ function updatePedidosTotal() {
         total = total + (preco * quantidade)
         console.log(preco, quantidade, total)
     }
+    total = (Math.round(total * 100) / 100).toFixed(2)
     document.getElementsByClassName('pedidosTotalPreco')[0].innerText = 'R$ ' + total
 }
 
