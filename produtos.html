@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos Page (TW3)</title>
     <link rel="stylesheet" href="../unime-TrabalhoWeb3/css/style.css">
+    <script type="text/javascript" src="../unime-TrabalhoWeb3/js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div id="titulo">
@@ -26,11 +27,11 @@
         <div id="conteudoProdutos">
             <div><img id="conteudoProdutosImg" src="../unime-TrabalhoWeb3/img/produtos/hp.jpg"></div>
             <div id="conteudoProdutosNome"><h3>Poção de Regeneração de Tecido</h3></div>
-            <div id="conteudoProdutosPreco"><h3>R$ 10,00</h3></div>
+            <div id="conteudoProdutosPreco"><h3>R$ 80,00</h3></div>
             <div id="conteudoProdutosQuan">
-                <button>+</button>
-                <input readonly type="text" value="0">
-                <button>-</button>
+                <button onclick="addQuanP1();">+</button>
+                <input id="quanP1" type="number" min="0" value="0"></input>
+                <button onclick="remQuanP1();">-</button>
             </div>
             <div id="conteudoProdutosDesc">Ingerida oralmente, uso único, acelera o processo de cicatrização e recuperação de tecido, efeitos ocorrem ao decorrer de 2 horas e pode variar de acordo com o peso do usuário. Agora com gostinho de cereja!</div>
         </div>
@@ -39,9 +40,9 @@
             <div id="conteudoProdutosNome"><h3>Poção de Regeneração de Tecido</h3></div>
             <div id="conteudoProdutosPreco"><h3>R$ 10,00</h3></div>
             <div id="conteudoProdutosQuan">
-                <button>+</button>
-                <input readonly type="text" value="0">
-                <button>-</button>
+                <button onclick="addQuanP2();">+</button>
+                <input id="quanP2" type="number" min="0" value="0"></input>
+                <button onclick="remQuanP2();">-</button>
             </div>
             <div id="conteudoProdutosDesc">Ingerida oralmente, uso único, acelera o processo de cicatrização e recuperação de tecido, efeitos ocorrem ao decorrer de 2 horas e pode variar de acordo com o peso do usuário. Agora com gostinho de cereja!</div>
         </div>
@@ -50,9 +51,9 @@
             <div id="conteudoProdutosNome"><h3>Poção de Regeneração de Tecido</h3></div>
             <div id="conteudoProdutosPreco"><h3>R$ 10,00</h3></div>
             <div id="conteudoProdutosQuan">
-                <button>+</button>
-                <input readonly type="text" value="0">
-                <button>-</button>
+                <button onclick="addQuanP3();">+</button>
+                <input id="quanP3" type="number" min="0" value="0"></input>
+                <button onclick="remQuanP3();">-</button>
             </div>
             <div id="conteudoProdutosDesc">Ingerida oralmente, uso único, acelera o processo de cicatrização e recuperação de tecido, efeitos ocorrem ao decorrer de 2 horas e pode variar de acordo com o peso do usuário. Agora com gostinho de cereja!</div>
         </div>
@@ -61,9 +62,9 @@
             <div id="conteudoProdutosNome"><h3>Poção de Regeneração de Tecido</h3></div>
             <div id="conteudoProdutosPreco"><h3>R$ 10,00</h3></div>
             <div id="conteudoProdutosQuan">
-                <button>+</button>
-                <input readonly type="text" value="0">
-                <button>-</button>
+                <button onclick="addQuanP4();">+</button>
+                <input id="quanP4" type="number" min="0" value="0"></input>
+                <button onclick="remQuanP4();">-</button>
             </div>
             <div id="conteudoProdutosDesc">Ingerida oralmente, uso único, acelera o processo de cicatrização e recuperação de tecido, efeitos ocorrem ao decorrer de 2 horas e pode variar de acordo com o peso do usuário. Agora com gostinho de cereja!</div>
         </div>
@@ -72,9 +73,9 @@
             <div id="conteudoProdutosNome"><h3>Poção de Regeneração de Tecido</h3></div>
             <div id="conteudoProdutosPreco"><h3>R$ 10,00</h3></div>
             <div id="conteudoProdutosQuan">
-                <button>+</button>
-                <input readonly type="text" value="0">
-                <button>-</button>
+                <button onclick="addQuanP5();">+</button>
+                <input id="quanP5" type="number" min="0" value="0"></input>
+                <button onclick="remQuanP5();">-</button>
             </div>
             <div id="conteudoProdutosDesc">Ingerida oralmente, uso único, acelera o processo de cicatrização e recuperação de tecido, efeitos ocorrem ao decorrer de 2 horas e pode variar de acordo com o peso do usuário. Agora com gostinho de cereja!</div>
         </div>
@@ -83,9 +84,9 @@
             <div id="conteudoProdutosNome"><h3>Poção de Regeneração de Tecido</h3></div>
             <div id="conteudoProdutosPreco"><h3>R$ 10,00</h3></div>
             <div id="conteudoProdutosQuan">
-                <button>+</button>
-                <input readonly type="text" value="0">
-                <button>-</button>
+                <button onclick="addQuanP6();">+</button>
+                <input id="quanP6" type="number" min="0" value="0"></input>
+                <button onclick="remQuanP6();">-</button>
             </div>
             <div id="conteudoProdutosDesc">Ingerida oralmente, uso único, acelera o processo de cicatrização e recuperação de tecido, efeitos ocorrem ao decorrer de 2 horas e pode variar de acordo com o peso do usuário. Agora com gostinho de cereja!</div>
         </div>
@@ -94,9 +95,9 @@
             <div id="conteudoProdutosNome"><h3>Poção de Regeneração de Tecido</h3></div>
             <div id="conteudoProdutosPreco"><h3>R$ 10,00</h3></div>
             <div id="conteudoProdutosQuan">
-                <button>+</button>
-                <input readonly type="text" value="0">
-                <button>-</button>
+                <button onclick="addQuanP7();">+</button>
+                <input id="quanP7" type="number" min="0" value="0"></input>
+                <button onclick="remQuanP7();">-</button>
             </div>
             <div id="conteudoProdutosDesc">Ingerida oralmente, uso único, acelera o processo de cicatrização e recuperação de tecido, efeitos ocorrem ao decorrer de 2 horas e pode variar de acordo com o peso do usuário. Agora com gostinho de cereja!</div>
         </div>
@@ -105,9 +106,9 @@
             <div id="conteudoProdutosNome"><h3>Poção de Regeneração de Tecido</h3></div>
             <div id="conteudoProdutosPreco"><h3>R$ 10,00</h3></div>
             <div id="conteudoProdutosQuan">
-                <button>+</button>
-                <input readonly type="text" value="0">
-                <button>-</button>
+                <button onclick="addQuanP8();">+</button>
+                <input id="quanP8" type="number" min="0" value="0"></input>
+                <button onclick="remQuanP8();">-</button>
             </div>
             <div id="conteudoProdutosDesc">Ingerida oralmente, uso único, acelera o processo de cicatrização e recuperação de tecido, efeitos ocorrem ao decorrer de 2 horas e pode variar de acordo com o peso do usuário. Agora com gostinho de cereja!</div>
         </div>
@@ -116,5 +117,89 @@
     <div id="calculos">
         
     </div>
+
+    <script>
+        var q = 0;
+        function addQuanP1() {
+            q++;
+            document.getElementById('quanP1').value = q;
+        }
+        function remQuanP1() {
+            if (q > 0) {
+                q--;
+                document.getElementById('quanP1').value = q;
+            }
+        }
+        function addQuanP2() {
+            q++;
+            document.getElementById('quanP2').value = q;
+        }
+        function remQuanP2() {
+            if (q > 0) {
+                q--;
+                document.getElementById('quanP2').value = q;
+            }
+        }
+        function addQuanP3() {
+            q++;
+            document.getElementById('quanP3').value = q;
+        }
+        function remQuanP3() {
+            if (q > 0) {
+                q--;
+                document.getElementById('quanP3').value = q;
+            }
+        }
+        function addQuanP4() {
+            q++;
+            document.getElementById('quanP4').value = q;
+        }
+        function remQuanP4() {
+            if (q > 0) {
+                q--;
+                document.getElementById('quanP4').value = q;
+            }
+        }
+        function addQuanP5() {
+            q++;
+            document.getElementById('quanP5').value = q;
+        }
+        function remQuanP5() {
+            if (q > 0) {
+                q--;
+                document.getElementById('quanP5').value = q;
+            }
+        }
+        function addQuanP6() {
+            q++;
+            document.getElementById('quanP6').value = q;
+        }
+        function remQuanP6() {
+            if (q > 0) {
+                q--;
+                document.getElementById('quanP6').value = q;
+            }
+        }
+        function addQuanP7() {
+            q++;
+            document.getElementById('quanP7').value = q;
+        }
+        function remQuanP7() {
+            if (q > 0) {
+                q--;
+                document.getElementById('quanP7').value = q;
+            }
+        }
+        function addQuanP8() {
+            q++;
+            document.getElementById('quanP8').value = q;
+        }
+        function remQuanP8() {
+            if (q > 0) {
+                q--;
+                document.getElementById('quanP8').value = q;
+            }
+        }
+    </script>
 </body>
 </html>
