@@ -153,7 +153,7 @@ a:active {
     padding: 10px;
 }
 
-#calculos {
+.pedidos {
     border: 5px solid #176412;
     border-radius: 15px;
     background-color: #6E4404;
@@ -162,10 +162,67 @@ a:active {
     padding: 20px;
     margin: 0 auto;
     margin-top: 20px;
-    width: 620px;
+    width: 1120px;
     min-height: 300px;
     overflow: auto;
 }
+.pedidosColuna {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-right: 1.5em;
+    padding: 10px;
+    margin-top: 10px;
+}
+.pedidosLinha {
+    display: flex;
+}
+.pedidosHead {
+    font-size: 1.25rem;
+}
+.pedidosNome {
+    width: 45%;
+}
+.pedidosNomeTitulo {
+    margin-top: 1em;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+.pedidosPreco {
+    width: 20%;
+    font-size: 1.2em;
+}
+.pedidosQuan {
+    width: 35%;
+}
+.pedidosQuanInput {
+    height: 34px;
+    width: 60px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #6E4404;
+    color: #DCEFBA;
+    opacity: 0.95;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: .5em;
+    margin-left: .5em;
+    margin-right: 4px;
+}
+.butaoRMV {
+    color: #DCEFBA;
+    background-color: #EB5757;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: .75em;
+}
+.butaoRMV:hover {
+    background-color: #CC4C4C;
+}
+
 
 ::-webkit-scrollbar {
     width: 20px;
