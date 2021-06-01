@@ -52,6 +52,7 @@ a:active {
     margin: 0 auto;
     width: 1120px;
     min-height: 800px;
+    overflow: auto;
 }
 
 .conteudoDesc {
@@ -115,30 +116,55 @@ a:active {
 }
 
 #conteudoProdutos {
+    float: left;
     border: 1px solid black;
     border-radius: 15px;
     padding: 10px;
-    width: 50%;
-    height: 800px;
-    overflow: auto;
+    margin: 15px;
+    width: 45%;
+    height: 386px;
 }
 #conteudoProdutosImg,
 #conteudoProdutosNome,
+#conteudoProdutosPreco,
+#conteudoProdutosQuan,
 #conteudoProdutosDesc {
-    display: table;
     border: 1px solid black;
     border-radius: 15px;
-    width: 50%;
+    width: 40%;
     height: auto;
-    margin: 0 auto;
-}
-#conteudoProdutosImg{
-    width: 53%;
+    float: left;
 }
 #conteudoProdutosNome,
-#conteudoProdutosDesc {
+#conteudoProdutosPreco,
+#conteudoProdutosQuan {
+    width: 57%;
+    margin-left: 10px;
+    margin-bottom: 10px;
     text-align: center;
+}
+#conteudoProdutosQuan {
+    width: 53%;
     padding: 10px;
+}
+#conteudoProdutosDesc {
+    margin-top: 10px;
+    width: 96%;
+    padding: 10px;
+}
+
+#calculos {
+    border: 5px solid #176412;
+    border-radius: 15px;
+    background-color: #6E4404;
+    opacity: 0.95;
+    box-shadow: 5px 5px #00000055;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 620px;
+    min-height: 300px;
+    overflow: auto;
 }
 
 ::-webkit-scrollbar {
