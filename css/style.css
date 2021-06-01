@@ -115,7 +115,7 @@ a:active {
     margin: 10px;
 }
 
-#conteudoProdutos {
+.conteudoProdutos {
     float: left;
     border: 1px solid black;
     border-radius: 15px;
@@ -124,30 +124,30 @@ a:active {
     width: 45%;
     height: 386px;
 }
-#conteudoProdutosImg,
-#conteudoProdutosNome,
-#conteudoProdutosPreco,
-#conteudoProdutosQuan,
-#conteudoProdutosDesc {
+.conteudoProdutosImg,
+.conteudoProdutosNome,
+.conteudoProdutosPreco,
+.conteudoProdutosQuan,
+.conteudoProdutosDesc {
     border: 1px solid black;
     border-radius: 15px;
     width: 40%;
     height: auto;
     float: left;
 }
-#conteudoProdutosNome,
-#conteudoProdutosPreco,
-#conteudoProdutosQuan {
+.conteudoProdutosNome,
+.conteudoProdutosPreco,
+.conteudoProdutosQuan {
     width: 57%;
     margin-left: 10px;
     margin-bottom: 10px;
     text-align: center;
 }
-#conteudoProdutosQuan {
+.conteudoProdutosQuan {
     width: 53%;
     padding: 10px;
 }
-#conteudoProdutosDesc {
+.conteudoProdutosDesc {
     margin-top: 10px;
     width: 96%;
     padding: 10px;

@@ -18,6 +18,13 @@ function ready() {
         input.addEventListener('change', quantidadeMudada)
     }
 
+    var addPedidosButao = document.getElementsByClassName('butaoProdutos')
+    for (var i = 0; i < addPedidosButao.length; i++) {
+        var button = addPedidosButao[i]
+        button.addEventListener('click', addPedidosClicado)
+    }
+
+
 }
 
 function removerPedidos(event) {
@@ -32,6 +39,42 @@ function quantidadeMudada(event) {
         input.value = 1
     }
     updatePedidosTotal()
+}
+
+function addPedidosClicado(event) {
+    var button = event.target
+    var itemProduto = button.parentElement.parentElement
+    var nome = itemProduto.getElementsByClassName('conteudoProdutosNome')[0].innerText
+    var preco = itemProduto.getElementsByClassName('conteudoProdutosPreco')[0].innerText
+    console.log(nome, preco)
+    addPedidosCarrinho(nome, preco)
+    updatePedidosTotal()
+}
+
+function addPedidosCarrinho(nome, preco) {
+    var carrinhoLinha = document.createElement('div')
+    carrinhoLinha.classList.add('pedidosItensLinha')
+    var carrinhoProdutos = document.getElementsByClassName('pedidosItens')[0]
+    var carrinhoProdutosNomes = carrinhoProdutos.getElementsByClassName('pedidosNomeTitulo')
+    for (var i = 0; i < carrinhoProdutosNomes.length; i++) {
+        if (carrinhoProdutosNomes[i].innerText == nome) {
+            alert('Você já adicionou esse item ao seu carrinho!')
+            return
+        }
+    }
+    var carrinhoLinhaConteudo = `
+        <div class="pedidosNome pedidosColuna">
+            <span class="pedidosNomeTitulo">${nome}</span>
+        </div>
+        <span class="pedidosPreco pedidosColuna" style="margin-top: 1em;">${preco}</span>
+        <div class="pedidosQuan pedidosColuna">
+            <input class="pedidosQuanInput" type="number" value="1">
+            <button class="butao butaoRMV" type="button">REMOVER</button>
+        </div>`
+    carrinhoLinha.innerHTML = carrinhoLinhaConteudo
+    carrinhoProdutos.append(carrinhoLinha)
+    carrinhoLinha.getElementsByClassName('butaoRMV')[0].addEventListener('click', removerPedidos)
+    carrinhoLinha.getElementsByClassName('pedidosQuanInput')[0].addEventListener('change', quantidadeMudada)
 }
 
 function updatePedidosTotal() {
