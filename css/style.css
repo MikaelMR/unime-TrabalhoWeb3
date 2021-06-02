@@ -42,7 +42,7 @@ a:active {
     text-decoration: none;
 }
 
-#conteudo {
+.conteudo {
     border: 5px solid #176412;
     border-radius: 15px;
     background-color: #6E4404;
@@ -274,6 +274,45 @@ a:active {
     margin-top: 10px;
 }
 
+.conteudoContato {
+    border: 5px solid #176412;
+    border-radius: 15px;
+    background-color: #6E4404;
+    opacity: 0.95;
+    box-shadow: 5px 5px #00000055;
+    padding: 20px;
+    margin: 0 auto;
+    width: 1120px;
+    overflow: auto;
+}
+.conteudoForm {
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+.conteudoFormMain,
+.conteudoFormSubmit {
+    display: inline-block;
+    vertical-align: middle;
+}
+.conteudoFormSubmit {
+    margin-left: 30px;
+}
+.conteudoFormControleSubmit {
+    font-size: 1.5em;
+}
+.conteudoFormControle {
+    border: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: #DCEFBA;
+    background-color: #176412;
+    padding: 10px;
+}
+.conteudoFormMensag {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 ::-webkit-scrollbar {
     width: 20px;
   }
@@ -288,3 +327,10 @@ a:active {
   ::-webkit-scrollbar-thumb:hover {
     background: #176412; 
   }
+
+.aluno {
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 50px;
+    padding: 10px;
+}
