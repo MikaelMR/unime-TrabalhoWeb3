@@ -80,7 +80,7 @@ function addPedidosCarrinho(nome, preco) {
 }
 
 /*PEGA O VALOR DO CEP*/
-function carrinhoCEP(){
+/*function carrinhoCEP(){
     var cep = document.getElementById("pedidosTotalCEP").value
     var cepDigito = cep.charAt(0);
 
@@ -124,11 +124,9 @@ function carrinhoCEP(){
             var regiao = "Rio Grande do Sul"
             var frete = 25.00
         }
-    updatePedidosTotal()
-    console.log(frete, regiao)
-}
+}*/
 
-/*UPDATE DO PREÇO TOTAL*/
+/*UPDATE DO PREÇO TOTAL COM CEP*/
 function updatePedidosTotal() {
     var pedidosItemContainer = document.getElementsByClassName('pedidosItens')[0]
     var pedidosRows = pedidosItemContainer.getElementsByClassName('pedidosItensLinha')
@@ -139,8 +137,50 @@ function updatePedidosTotal() {
         var quantElement = pedidosRow.getElementsByClassName('pedidosQuanInput')[0]
         var preco = parseFloat(precoElement.innerText.replace('R$', ''))
         var quantidade = quantElement.value
-        total = total + (preco * quantidade)
-        console.log(preco, quantidade, total)
+        var cep = document.getElementById("pedidosTotalCEP").value
+        var cepDigito = cep.charAt(0)
+        if(cepDigito == 0) {
+            var regiao = "Grande São Paulo"
+            var frete = 15.00
+        }
+        if(cepDigito == 1) {
+            var regiao = "Interior de São Paulo"
+            var frete = 18.00
+        }
+        if(cepDigito == 2) {
+            var regiao = "Rio de Janeiro e Espírito Santo"
+            var frete = 20.00
+        }
+        if(cepDigito == 3) {
+            var regiao = "Minas Gerais"
+            var frete = 13.00
+        }
+        if(cepDigito == 4) {
+            var regiao = "Bahia e Sergipe"
+            var frete = 5.00
+        }
+        if(cepDigito == 5) {
+            var regiao = "Pernambuco, Alagoas, Paraíba e Rio Grande do Norte"
+            var frete = 12.00
+        }
+        if(cepDigito == 6) {
+            var regiao = "Ceará, Piauí, Maranhão, Pará, Amazonas, Acre, Amapá e Roraima"
+            var frete = 19.00
+        }
+        if(cepDigito == 7) {
+            var regiao = "Distrito Federal, Goiás, Tocantins, Mato Grosso, Mato Grosso do Sul e Rondônia"
+            var frete = 14.00
+        }
+        if(cepDigito == 8) {
+            var regiao = "Paraná e Santa Catarina"
+            var frete = 22.00
+        }
+        if(cepDigito == 9) {
+            var regiao = "Rio Grande do Sul"
+            var frete = 25.00
+        }
+        total = (total + (preco * quantidade)) + frete
+        console.log(preco, quantidade, total, cepDigito, frete, regiao)
     }
     total = (Math.round(total * 100) / 100).toFixed(2)
     document.getElementsByClassName('pedidosTotalPreco')[0].innerText = 'R$ ' + total
