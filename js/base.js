@@ -23,16 +23,16 @@ function ready() {
         var button = addPedidosButao[i]
         button.addEventListener('click', addPedidosClicado)
     }
-
-
 }
 
+/*BUTÃO DE REMOVER PRODUTOS DO CARRINHO*/
 function removerPedidos(event) {
     var butaoClicado = event.target
     butaoClicado.parentElement.parentElement.remove()
     updatePedidosTotal()
 }
 
+/*EVITA A CAIXA DE QUANTIDADE FICAR NEGATIVA OU VAZIA*/
 function quantidadeMudada(event) {
     var input = event.target
     if (isNaN(input.value) || input.value <= 0) {
@@ -41,6 +41,7 @@ function quantidadeMudada(event) {
     updatePedidosTotal()
 }
 
+/*BUTÃO PARA ADICIONAR PRODUTOS NO CARRINHO*/
 function addPedidosClicado(event) {
     var button = event.target
     var itemProduto = button.parentElement.parentElement
@@ -51,6 +52,7 @@ function addPedidosClicado(event) {
     updatePedidosTotal()
 }
 
+/*ADICIONA PRODUTOS NO CARRINHO*/
 function addPedidosCarrinho(nome, preco) {
     var carrinhoLinha = document.createElement('div')
     carrinhoLinha.classList.add('pedidosItensLinha')
@@ -77,6 +79,56 @@ function addPedidosCarrinho(nome, preco) {
     carrinhoLinha.getElementsByClassName('pedidosQuanInput')[0].addEventListener('change', quantidadeMudada)
 }
 
+/*PEGA O VALOR DO CEP*/
+function carrinhoCEP(){
+    var cep = document.getElementById("pedidosTotalCEP").value
+    var cepDigito = cep.charAt(0);
+
+        if(cepDigito == 0) {
+            var regiao = "Grande São Paulo"
+            var frete = 15.00
+        }
+        if(cepDigito == 1) {
+            var regiao = "Interior de São Paulo"
+            var frete = 18.00
+        }
+        if(cepDigito == 2) {
+            var regiao = "Rio de Janeiro e Espírito Santo"
+            var frete = 20.00
+        }
+        if(cepDigito == 3) {
+            var regiao = "Minas Gerais"
+            var frete = 13.00
+        }
+        if(cepDigito == 4) {
+            var regiao = "Bahia e Sergipe"
+            var frete = 5.00
+        }
+        if(cepDigito == 5) {
+            var regiao = "Pernambuco, Alagoas, Paraíba e Rio Grande do Norte"
+            var frete = 12.00
+        }
+        if(cepDigito == 6) {
+            var regiao = "Ceará, Piauí, Maranhão, Pará, Amazonas, Acre, Amapá e Roraima"
+            var frete = 19.00
+        }
+        if(cepDigito == 7) {
+            var regiao = "Distrito Federal, Goiás, Tocantins, Mato Grosso, Mato Grosso do Sul e Rondônia"
+            var frete = 14.00
+        }
+        if(cepDigito == 8) {
+            var regiao = "Paraná e Santa Catarina"
+            var frete = 22.00
+        }
+        if(cepDigito == 9) {
+            var regiao = "Rio Grande do Sul"
+            var frete = 25.00
+        }
+    updatePedidosTotal()
+    console.log(frete, regiao)
+}
+
+/*UPDATE DO PREÇO TOTAL*/
 function updatePedidosTotal() {
     var pedidosItemContainer = document.getElementsByClassName('pedidosItens')[0]
     var pedidosRows = pedidosItemContainer.getElementsByClassName('pedidosItensLinha')
@@ -93,6 +145,8 @@ function updatePedidosTotal() {
     total = (Math.round(total * 100) / 100).toFixed(2)
     document.getElementsByClassName('pedidosTotalPreco')[0].innerText = 'R$ ' + total
 }
+
+
 
 
 
