@@ -70,9 +70,10 @@ a:active {
     padding: 10px;
     text-align: center;
 }
-#conteudoFuncEquipe {
+.conteudoFuncEquipe {
     border: 1px solid black;
     border-radius: 8px;
+    background-color: #176412;
     width: fit-content;
     padding: 10px;
     text-align: center;
